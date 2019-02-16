@@ -29,6 +29,8 @@
 		6B0B1FE62217090E00133B5A /* RecordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0B1FE52217090E00133B5A /* RecordDetailViewController.swift */; };
 		6B0B1FE82217091E00133B5A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0B1FE72217091E00133B5A /* BaseViewController.swift */; };
 		6B0B1FEA22170CE300133B5A /* RecordDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0B1FE922170CE300133B5A /* RecordDetailCell.swift */; };
+		6BDAEDCA22183F17002A3C46 /* TWD97Convert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAEDC922183F17002A3C46 /* TWD97Convert.swift */; };
+		6BDAEDCC2218496D002A3C46 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAEDCB2218496D002A3C46 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		6B0B1FE52217090E00133B5A /* RecordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailViewController.swift; sourceTree = "<group>"; };
 		6B0B1FE72217091E00133B5A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		6B0B1FE922170CE300133B5A /* RecordDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailCell.swift; sourceTree = "<group>"; };
+		6BDAEDC922183F17002A3C46 /* TWD97Convert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWD97Convert.swift; sourceTree = "<group>"; };
+		6BDAEDCB2218496D002A3C46 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		7DABC0AB7D9116B383781232 /* Pods_ParkSearchDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkSearchDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -132,6 +136,7 @@
 				6B0B1FD22216CA4000133B5A /* Infomation.swift */,
 				6B07B26922178A3000E86654 /* Record.swift */,
 				6B07B2762217CF8400E86654 /* ParkInformation.swift */,
+				6BDAEDCB2218496D002A3C46 /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 				6B0B1FE72217091E00133B5A /* BaseViewController.swift */,
 				6B07B27C2217D99F00E86654 /* UIColor+Extension.swift */,
 				6B07B27E2217F49F00E86654 /* AreaHelper.swift */,
+				6BDAEDC922183F17002A3C46 /* TWD97Convert.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -241,8 +247,10 @@
 				6B0B1FE62217090E00133B5A /* RecordDetailViewController.swift in Sources */,
 				6B0B1FD32216CA4000133B5A /* Infomation.swift in Sources */,
 				6B07B26A22178A3000E86654 /* Record.swift in Sources */,
+				6BDAEDCC2218496D002A3C46 /* Item.swift in Sources */,
 				6B07B2772217CF8400E86654 /* ParkInformation.swift in Sources */,
 				6B07B2712217970C00E86654 /* ParkSearchDemo.xcdatamodeld in Sources */,
+				6BDAEDCA22183F17002A3C46 /* TWD97Convert.swift in Sources */,
 				6B0B1FDF2217020500133B5A /* UIView+Anchors.swift in Sources */,
 				6B0B1FD72216FC0B00133B5A /* APIService.swift in Sources */,
 				6B07B26E221791C400E86654 /* Mediator.swift in Sources */,
@@ -392,6 +400,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 83HLCELRLG;
 				INFOPLIST_FILE = ParkSearchDemo/Info.plist;
@@ -401,6 +410,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.liao-yuhao.ParkSearchDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -410,6 +420,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 83HLCELRLG;
 				INFOPLIST_FILE = ParkSearchDemo/Info.plist;
@@ -419,6 +430,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.liao-yuhao.ParkSearchDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

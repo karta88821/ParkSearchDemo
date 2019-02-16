@@ -8,6 +8,8 @@
 
 import Foundation
 import CoreData
+import MapKit
+import Contacts
 
 extension CodingUserInfoKey {
     static let context = CodingUserInfoKey(rawValue: "context")
@@ -66,18 +68,29 @@ class Record: NSManagedObject, Codable {
     }
 }
 
-extension Record {
-    var tw97XValue: Double {
-        return Double(tw97X) ?? 0
+extension Record: MKAnnotation {
+    var coordinate: CLLocationCoordinate2D {
+        let tw97XValue = Double(tw97X) ?? 0
+        let tw97YValue = Double(tw97Y) ?? 0
+        let WGS84 = TWD97Convert.toWGS84(x: tw97XValue, y: tw97YValue)
+        return CLLocationCoordinate2D(latitude: WGS84.lat, longitude: WGS84.lng)
     }
-    var tw97YValue: Double {
-        return Double(tw97Y) ?? 0
+    
+    var title: String? {
+        return name
     }
-}
-
-struct Item {
-    let title: String
-    let content: String
+    
+    var subtitle: String? {
+        return "營業時間：" + serviceTime
+    }
+    
+    func mapItem() -> MKMapItem {
+        let nameDict = [CNPostalAddressStreetKey: name]
+        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: nameDict)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = title
+        return mapItem
+    }
 }
 
 extension Record {
