@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18C31g" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Record" representedClassName=".Record" syncable="YES">
+        <attribute name="address" attributeType="String" syncable="YES"/>
+        <attribute name="area" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="serviceTime" attributeType="String" syncable="YES"/>
+        <attribute name="tw97X" attributeType="String" syncable="YES"/>
+        <attribute name="tw97Y" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Record" positionX="-63" positionY="-18" width="128" height="135"/>
+    </elements>
+</model>
